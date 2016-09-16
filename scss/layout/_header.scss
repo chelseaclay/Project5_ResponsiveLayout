@@ -1,0 +1,11 @@
+#main-nav {
+  background-color: $lightGray;
+  text-align: center;
+  margin: -22px auto 0;
+  padding-bottom: 30px;
+  width: 100%;
+  
+  @include desktop {
+    @include flexbox(flex, space-around, baseline, wrap);
+  }
+}

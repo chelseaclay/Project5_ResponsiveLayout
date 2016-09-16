@@ -1,0 +1,198 @@
+%linkDefault {
+  font-weight: $boldFont;
+  text-decoration: none;
+}
+
+// Top Navigation
+
+nav {
+  @include flexbox(flex, space-between, flex-end);
+  background-color: black;
+  padding: 1em;
+  
+  @include tablet {
+    background-color: $lightGray;
+  }
+}
+
+#menu {
+  @include tablet {
+    display: none;
+  }
+}
+
+#main-name {
+  @include text($displayFont, $quoteCopy, white);
+  margin: 15px 0 0 0;
+  text-align: left;
+  padding: 10px 0 0 0;
+  
+  @include tablet {
+     margin: 30px auto -10px;
+  }
+  
+  @include desktop {
+    margin: 0;
+    padding: 30px 0 50px;
+  }
+  
+  a {
+    @extend %linkDefault;
+    color: white;
+    
+    @include tablet {
+      color: black;
+      font-size: 2.25em;
+    }
+  }
+}
+
+.slideMenu {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+  
+  @include tablet {
+    max-height: 100%;
+  }
+}
+
+#nav-buttons {
+  background-color: $darkGray;
+  padding: 20px 1em 0;
+  margin-top: -20px;
+  
+  @include tablet {
+    background-color: $lightGray;
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+.slide {
+  max-height:350px;
+}
+
+.nav-bar {
+  @include text($textFont, $bodyCopy, white);
+  text-align: center;
+  display: block;
+  margin-bottom: 8px;
+  padding: 15px;
+  text-transform: uppercase;
+  
+  @include tablet {
+    @include text($textFont, $bodyCopy, $lightGray);
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+  }
+  
+  a {
+    @extend %linkDefault;
+    color: white;
+    
+    &:hover {
+      color: black;
+      font-weight: $boldFont;
+      opacity: 0.5;
+    }
+      
+    @include tablet {
+      color: $darkGray;
+      font-size: $subHeadCopy;
+    }
+  }
+}
+
+
+// Bottom Navigation
+
+#sec-nav {
+  @include flexbox(flex, space-between);
+  margin: 0 auto;
+  padding: 20px 1em;
+  
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+  
+  @include desktop {
+    margin: 0 auto;
+    width: 90%;
+    max-width: $maxWidth;
+  }
+}
+
+#name {
+  @include text($displayFont, $subHeadCopy, black);
+  list-style: none;
+  
+  a {
+    @extend %linkDefault;
+    color: black;
+  }
+  
+  @include tablet {
+    flex-grow: 1;
+    order: 1;
+  }
+}
+
+#top {
+  @include text($textFont, $footerNavCopy, $darkGray);
+  padding-top: 0.65em;
+  padding-left: 1em;
+  list-style: none;
+  text-transform: uppercase;
+  
+  @include tablet {
+    display: none;
+  }
+  
+  a {
+    @extend %linkDefault;
+    color: $darkGray;
+    
+    &:hover {
+      color: black;
+      font-weight: $boldFont;
+      opacity: 0.5;
+    }
+  }
+}
+
+.list-nav {
+  display: none;
+  
+  @include tablet {
+    @include text($textFont, $footerNavCopy, black);
+    display: inline-flex;
+    margin: auto;
+    padding-top: 0.65em;
+    padding-left: 1em;
+    list-style: none;
+    text-transform: uppercase;
+  }
+}
+
+.list-nav a {
+  @include tablet {
+    color: $darkGray;
+    font-weight: $boldFont;
+    text-decoration: none;
+  }
+  
+  &:hover {
+    @include tablet {
+      color: black;
+      font-weight: 700;
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+#gallery {
+  list-style: none;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  
+  li {
+    @include tablet {
+      width: 50%;
+      margin: 0 auto;
+    }
+    
+    @include desktop {
+      width: 33%;
+      margin: 0 auto;
+    }
+  }
+  
+  @include tablet {
+    @include flexbox(flex, space-between, $wrap:wrap);
+  }
+}
+
+#gallery img {
+  max-width: 80%;
+  border-radius: 2%;
+  box-shadow: 0 15px 20px -12px $darkGray;
+}
+
+.caption {
+  line-height: $lHeight;
+  margin: 0 auto 60px;
+  max-width: 80%;
+}

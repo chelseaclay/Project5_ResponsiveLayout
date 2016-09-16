@@ -1,0 +1,25 @@
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $primaryOrange;
+  margin-top: 60px;
+  margin-bottom: 0;
+  
+  @include desktop {
+    width: 90%;
+    max-width: 1600px;
+  }
+}
+
+.slideMenu {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+}
+
+.slide {
+  max-height: 350px;
+}

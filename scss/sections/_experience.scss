@@ -1,0 +1,26 @@
+#skills {
+  li {
+    @include text($textFont, $bodyCopy, $textColor);
+    list-style: none;
+    display: block;
+    margin: 5px auto;
+    padding: 20px 70px;
+    background-color: $lightGray;
+    background-color: rgba(255, 92, 51, 0.08);
+    line-height: $lHeight;
+    
+    @include tablet {
+      margin: 0 0.5em;
+      padding: 30px 70px;
+      width: 33.33%;
+    }
+  }
+  
+  img {
+    width: 100px;
+  }
+  
+  h3 {
+    margin: 8px auto;
+  }
+}

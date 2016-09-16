@@ -1,0 +1,14 @@
+h2 {
+  @include text($displayFont, $headingCopy, black, $boldFont);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h3 {
+  @include text($textFont, $subHeadCopy, black, $boldFont);
+}
+
+p {
+  @include text ($textFont, $bodyCopy, $textColor);
+  line-height: $lHeight;
+}

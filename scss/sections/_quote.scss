@@ -1,0 +1,32 @@
+%quote {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+#quote {
+  h1 {
+    @include text($displayFont, 1.60em, $primaryOrange, $boldFont);
+    @extend %quote;
+    top: 50%;
+    line-height: 2.1em;
+    text-shadow: 0 2px 2px black;
+    
+    @include tablet {
+      font-size: $quoteCopy;
+      line-height: 2.75em;
+    }
+  }
+  
+  p {
+    @extend %quote;
+    color: black;
+    top: 90%;
+    
+    @include tablet {
+      color: white;
+    }
+  }
+}

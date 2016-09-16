@@ -1,0 +1,58 @@
+%centerText{
+  text-align: center;
+}
+
+#experience {
+  padding-bottom: 30px;
+  
+  @include desktop {
+    margin: 0 auto;
+    width: 90%;
+    max-width: $maxWidth;
+  }
+}
+
+#skills {
+  padding: 20px 1em;
+  margin: 0 auto;
+  @extend #experience;
+  @extend %centerText;
+  
+  @include tablet {
+    @include flexbox(flex, space-around);
+    margin: 0 auto;
+  }
+}
+
+#quote {
+  display: block;
+  background: url("../img/quote.jpg") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  height: 300px;
+  width: 100%;
+  position: relative;
+  @extend %centerText;
+}
+
+#portfolio {
+  display: block;
+  padding: 20px 1em;
+  margin: 0 auto;
+  @extend #experience;
+  @extend %centerText;
+  
+  @include desktop {
+    margin: 0 auto;
+    width: 90%;
+    max-width: $maxWidth;
+  }
+}
+
+#contact {
+  background-color: $lightGray;
+  margin: 0 auto;
+  width: 100%;
+  padding: 15px 1em 1px;
+  @extend %centerText;
+}

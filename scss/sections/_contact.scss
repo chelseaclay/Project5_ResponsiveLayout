@@ -1,0 +1,33 @@
+#contact {
+  p {
+    @include text($textFont, $bodyCopy, $textColor);
+    line-height: $lHeight;
+  
+    @include tablet {
+      margin: 0 auto;
+      max-width: 60%;
+    }
+  
+    @include desktop {
+      margin: 0 auto;
+      width: 90%;
+      max-width: 1600px;
+    }
+  }
+
+  a {
+    color: $darkGray;
+    font-weight: $boldFont;
+    text-decoration: none;
+    
+    &:hover {
+      color: black;
+      font-weight: $boldFont;
+      opacity: 0.5;
+    }
+  }
+}
+
+#phone {
+    padding-top: 1.25em;
+}
