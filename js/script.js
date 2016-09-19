@@ -8,12 +8,12 @@ $("#menu").click(function() {
   }
 });
 
-// $(".nav-bar").click(function() {
-//   $(".slideMenu").hide();
-// });
-
-
 $(".nav-bar").click(function() {
-  $(".slideMenu").removeClass("slide");
-  $(".slideMenu").hide();
+  var windowWidth = $(window).width();
+  if (windowWidth < 738) {
+    $(".slideMenu").removeClass("slide");
+    $(".slideMenu").hide();
+  } else if (windowWidth > 738) {
+    $(".slideMenu").show();
+  }
 });
