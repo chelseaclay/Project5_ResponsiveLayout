@@ -13,7 +13,14 @@ $(".nav-bar").click(function() {
   if (windowWidth < 738) {
     $(".slideMenu").removeClass("slide");
     $(".slideMenu").hide();
-  } else if (windowWidth > 738) {
+  } else {
+    $(".slideMenu").show();
+  }
+});
+
+$( window ).resize(function() {
+  var windowWidth = $(window).width();
+  if (windowWidth < 738) {
     $(".slideMenu").show();
   }
 });
